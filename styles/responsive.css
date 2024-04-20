@@ -1,0 +1,95 @@
+/* Media Queries */
+@media screen and (max-width: 376px) { /* Phones */
+    .navbar {
+        display: none;
+    }
+    .navbar-header {
+        display: none;
+    }
+
+    /* Main Header */
+    .main-header h1 {
+        font-size: 20px;
+    }
+
+    /* Sections */
+    .section-informations {
+        flex-direction: column;
+        align-items: left;
+        max-width: fit-content;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .section-informations h2 {
+        text-align: left;
+        width: 80%;
+    }
+
+    .section-informations > p {
+        height: fit-content;
+        text-align: left;
+        max-width: 80%;
+        width: 80%;
+    }
+
+    /* Timeline */
+    .timeline {
+        width: 80%;
+        float: left;
+        margin: auto;
+    }
+
+    .bg-container {
+        width: 100%;
+        left: -10%;
+        text-align: center;
+    }
+
+    .bg-container::after { 
+        display: none;
+    }
+
+    .timeline::after {
+        z-index: -99;
+        height: 109%;
+    }
+    
+    .timeline {
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+
+    .content {
+        width: auto;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    .right h2 {
+        left: 50%;
+        width: 100%;
+    }
+
+    /* Navbar Toggle Button */
+    .toggle-button {
+        display: inline-block;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-links li {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+
+    li > a {
+        display: block;
+        padding: 10px;
+    }
+}

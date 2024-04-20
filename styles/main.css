@@ -1,0 +1,563 @@
+/* Palette
+
+#F5F5F5
+#B0D7FF
+#709FDF
+#3066BE
+#142E52
+#040910
+*/
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    max-width: 100%;
+}
+
+/* Typography */
+b {
+    font-weight: 900;
+}
+
+a, h1, h2, p {
+    color: #142E52;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+/* Background Styles */
+.bg-left-to-right {
+    background: white;
+    background: linear-gradient(to left, white 51%, #3066BE 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.toggle-button.bg-left {
+    background-position: left;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar.hidden {
+    display: none;
+}
+
+.navbar-links li {
+    display: inline;
+    float: right;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+.navbar-header {
+    display: inline;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    list-style-type: none;
+}
+
+li > a {
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    background: white;
+    background: linear-gradient(to left, white 50%, #3066BE 50%) right;
+    background-size: 300% 100%;
+    transition: .5s ease-out;
+    padding: 8px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+li > a:hover {
+    background-position: left;
+    color: #F5F5F5;
+}
+
+#github-profile:hover:before {
+    content: "Check out ";
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    box-sizing: border-box;
+}
+
+.toggle-button {
+    display: none;
+}
+
+/* Main Header */
+.main-header {
+    width: 100vw;
+    max-width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header h1 {
+    font-size: 30px;
+}
+
+.expand-more {
+    font-size: 40px;
+    cursor: pointer;
+    
+    background: white;
+    background: linear-gradient(to top, white 50%, #3066BE 50%) bottom;
+    background-size: 100% 200%;
+    transition: .5s ease-out;
+    
+    transition: .5s ease-out;
+    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.expand-more:hover {
+    background-position: top; 
+    color: white;
+    
+    
+}
+
+/* Section 2 */
+
+.section-informations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;   
+    padding-bottom: 50px;
+}
+
+.section-informations > p {
+    max-width: 50%;
+    height: 35%;
+}
+
+.section-informations h2 {
+    text-align: right;
+    width: 20%;
+    height: 35%;
+    padding: 0px 0px;
+    font-size: 20px;
+}
+
+.background {
+    height:  fit-content;
+    max-width: 100%;
+}
+
+.background h2 {
+    float: top;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    width: 50%;
+    height: 35%;
+    float: left;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(1,0,20,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 90%, rgba(0,212,255,0) 100%);
+    top: -20px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    padding-top: 20px;
+    
+}
+
+/* Container around content */
+.bg-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Circles */
+.bg-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 12px;
+    background-color: white;
+    border: 7px solid #142E52;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.right {
+    left: 50%;
+    
+}
+
+/* ARROWS */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #142E52;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #142E52 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content{
+    padding: 20px 30px;
+    background-color: #142E52;
+    position: relative;
+    border-radius: 6px;
+    width: auto;
+}
+
+.right h2, .right p, .right a, .right b {
+    color: #F5F5F5;
+}
+
+.right a {
+    background-color: #142E52;
+    background: linear-gradient(to left, #142E52 50%, #3066be 50%) right;
+    background-size: 300% 100%;
+    transition: .5s ease-out;
+    font-size: 20px;
+}
+
+.right a:hover {
+    background-position: left;
+    color: white;
+}
+
+/* TODO: IMPORTANT, FIX THE MESSY CODES */
+/*
+margin: 10px;
+margin-top: 10px;
+padding: 10px;
+width: fit-content;
+height: fit-content;
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box; 
+list-style-type: none;
+}*/
+
+li > a {
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    background: white;
+    background: linear-gradient(to left, white 50%, #3066BE 50%) right;
+    background-size: 300% 100%;
+    transition: .5s ease-out;
+    padding: 8px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+li > a:hover {
+    background-position: left;
+    color: #F5F5F5;
+}
+
+#github-profile:hover:before {
+    content: "Check out ";
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    box-sizing: border-box;
+}
+
+.toggle-button {
+    display: none;
+}
+
+/* Main Header */
+.main-header {
+    width: 100vw;
+    max-width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header h1 {
+    font-size: 30px;
+}
+
+.expand-more {
+    font-size: 40px;
+    cursor: pointer;
+    
+    background: white;
+    background: linear-gradient(to top, white 50%, #3066BE 50%) bottom;
+    background-size: 100% 200%;
+    transition: .5s ease-out;
+    
+    transition: .5s ease-out;
+    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.expand-more:hover {
+    background-position: top; 
+    color: white;
+    
+    
+}
+
+/* Section 2 */
+
+.section-informations {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items to the top */
+    justify-content: space-evenly;   
+}
+
+.section-informations > p {
+    max-width: 50%;
+    height: 35%;
+}
+
+.section-informations h2 {
+    text-align: right;
+    width: 20%;
+    height: 35%;
+}
+
+.background {
+    height:  fit-content;
+    max-width: 100%;
+}
+
+.background h2 {
+    float: top;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    width: 50%;
+    height: 35%;
+    float: left;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(1,0,20,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 90%, rgba(0,212,255,0) 100%);
+    top: -20px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    padding-top: 20px;
+    
+}
+
+/* Container around content */
+.bg-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Circles */
+.bg-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 12px;
+    background-color: white;
+    border: 7px solid #142E52;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.right {
+    left: 50%;
+    
+}
+
+/* ARROWS */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #142E52;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #142E52 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content{
+    padding: 20px 30px;
+    background-color: #142E52;
+    position: relative;
+    border-radius: 6px;
+    width: auto;
+}
+
+.right h2, .right p, .right a, .right b {
+    color: #F5F5F5;
+    
+}
+
+.right a {
+    background-color: #142E52;
+    background: linear-gradient(to left, #142E52 50%, #3066be 50%) right;
+    background-size: 300% 100%;
+    transition: .5s ease-out;
+    font-size: 20px;
+}
+
+.right a:hover {
+    background-position: left;
+    color: white;
+}
+
+/* SKILLS-TABLE */
+.skills-table {
+    max-width: 50%;
+    height: 35%;
+}
+
+table th, table td {
+    text-align: left;
+    padding-right: 30px;
+}
+
+/* PROJECTS */
+
+
+.projects a {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+.projects h2 {
+    width: fit-content;
+}
+
+.projects {
+    max-width: 500px;
+    max-height: fit-content;
+}
+
+
+.tags {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.tags span {
+    margin-right: 20px;
+    padding: 4px;
+    border: 1px solid black;
+    max-height: fit-content;
+    border-radius: 5px;
+}
+
+.featured-projects {
+    height: fit-content;
+}
+
+.featured-projects  {
+    align-items: flex-start;
+}
+
+.projects {
+    margin-bottom: 70px;
+}
+
+.projects-container {
+    margin-top: 0;
+}
+
+/* TODO: IMPORTANT, FIX THE MESSY CODES */
