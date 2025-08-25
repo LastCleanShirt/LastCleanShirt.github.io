@@ -1,34 +1,34 @@
 /* ========== Global Reset ========== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ========== Base Styles ========== */
 body {
-  max-width: 100vw;
+    max-width: 100vw;
 }
 
 .dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 /* ========== Layout Utilities ========== */
 .flex-row {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .grid {
-  display: grid;
-  place-items: center;
-  grid-auto-flow: column;
-  grid-template-rows: 1fr;
-  gap: 40px;
-  justify-content: space-between !important;
-  padding: 30px;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    justify-content: space-between !important;
+    padding: 30px;
 }
 
 .jc-sb {
@@ -50,60 +50,104 @@ body {
 }
 
 .project-card:hover {
+    cursor: pointer;
     border-style: solid;
+    height: 105%;
 }
 
 /* ========== Typography ========== */
 h1,
 h2,
 p {
-  text-align: center;
-  font-family: "Hack";
+    text-align: center;
+    font-family: "Hack";
 }
 
 /* ========== Sections ========== */
 section {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px !important;
-  box-sizing: border-box;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px !important;
+    box-sizing: border-box;
 }
 
 .projects {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    max-width: 900px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+section.grid > h1 {
+    display: flex;          /* make h1 a flex container */
+    align-items: center;    /* center content vertically */
+    justify-content: center;/* center content horizontally */
+    width: 90%;             /* match .projects width */
+    max-width: 900px;       /* match .projects max-width */
+    height: 60%;            /* height reference for vertical centering */
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+section.grid.jc-sb {
+    display: flex;
+    flex-direction: column; /* stack heading and projects vertically */
+    justify-content: space-between !important;
+    align-items: center;    /* center content horizontally */
+    gap: 0px !important;              /* space between heading and projects */
 }
 
 /* ========== Responsive ========== */
 @media (max-width: 640px) {
-  /* Mobile adjustments */
-  section {
-    height: 100vh;
-    justify-content: center !important;
-  }
-
-  h1,
-  h2 {
-    font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
-  }
-
-  .grid {
-    gap: 0;
-    grid-auto-flow: row;
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .projects {
-    justify-content: space-between;
-    gap: 40px;
-  }
-
-  .project-card {
-    height: auto;
-  }
+    /* Mobile adjustments */
+    section {
+        height: 100vh;
+        justify-content: center !important;
+    }
+    
+    h1,
+    h2 {
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+    }
+    
+    .grid {
+        gap: 0;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .projects {
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    .project-card {
+        height: auto;
+    }
+    
+    section.grid > h1 {
+        display: flex;          /* make h1 a flex container */
+        align-items: center;    /* center content vertically */
+        justify-content: center;/* center content horizontally */
+        width: 90%;             /* match .projects width */
+        max-width: 900px;       /* match .projects max-width */
+        height: 100%;            /* height reference for vertical centering */
+        text-align: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    /* section.grid.jc-sb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-items: center;    
+    gap: 30px !important;             
+    } */
 }
