@@ -130,10 +130,82 @@ body {
     }
 }
 
+/* Experience Section */
+.experience {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.experience h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: "Hack", monospace;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid #fff;
+  padding-left: 13px;
+  margin: 0 auto;
+}
+
+.timeline p {
+    font-size: calc(140%) !important;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  padding: 20px !important;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .experience h1 {
+    font-size: 2rem;
+  }
+
+  .timeline {
+    border-left: 2px solid #ccc;
+    padding-left: 15px;
+  }
+
+  .timeline-item .year {
+    font-size: 1rem;
+  }
+
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* ========== Typography ========== */
 h1,
 h2,
-p {
+p,
+span {
     text-align: center;
     font-family: "Hack";
 }
@@ -193,7 +265,7 @@ section.grid.jc-sb {
     }
     
     /* Projects container responsive layout */
-    .projects {
+    .card-grid {
         width: 90%;       /* match .projects width */
         max-width: 400px;
         text-align: center;
@@ -204,7 +276,7 @@ section.grid.jc-sb {
     }
     
     /* Each project card */
-    .project-card {
+    .card {
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
