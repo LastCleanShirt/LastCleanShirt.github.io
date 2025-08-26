@@ -166,13 +166,13 @@ section.grid.jc-sb {
     
     /* Projects container responsive layout */
     .projects {
-        display: grid;
-        grid-template-columns: 1fr; /* stack vertically */
-        width: 90%;                /* fit within mobile view */
+        width: 90%;       /* match .projects width */
         max-width: 400px;
+        text-align: center;
         margin: 0 auto;
-        gap: 20px;
-        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(80%);
     }
     
     /* Each project card */
