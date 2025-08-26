@@ -7,38 +7,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <title>Lastcleanshirt Portfolio</title>
 </head>
 <body class="dark-mode">
-    <section>
+    <section class="dotted-bg" id="sc-one">
         <!-- Your content here -->
         <h1>Halo 👋, I'm Arya</h1>
-        <h2>Let's connect 👀</h2>
+        <h2 id="lets-connect"></h2>
     </section>
     <section class="grid jc-sb">
         <h1>My Projects</h1>
         <div class="projects grid-items">
-            <div class="project-card">
+            <div class="project-card" onclick="window.location.href = 'https://github.com/LastCleanShirt/Myquran'">
                 <h2>Myquran</h2>
-                <p>Description of project 1.</p>
+                <p>A desktop Quran listening application based on Electron</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="window.location.href = 'https://github.com/LastCleanShirt/animesearch'">
                 <h2>Animesearch</h2>
-                <p>Description of project 2.</p>
+                <p>A simple Google for the weebs</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="window.location.href = 'https://github.com/LastCleanShirt/re-type.github.io'">
                 <h2>re-type (website disabled)</h2>
-                <p>Description of project 3.</p>
+                <p>A web application to practice typing. Website is discontinued</p>
             </div>
-            <div class="project-card">
-                <h2>re-type (website disabled)</h2>
-                <p>Description of project 3.</p>
-            </div>
-            <div class="project-card">
-                <h2>re-type (website disabled)</h2>
-                <p>Description of project 3.</p>
+            <div class="project-card" onclick="window.location.href = 'https://github.com/LastCleanShirt'">
+                <h2>Check my github repo --></h2>
             </div>
         </div>
     </section>
+    <section class="dotted-bg">
+
+    </section>
+    <script src="index.js"></script>
 </body>
 </html>

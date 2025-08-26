@@ -3,6 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
 /* ========== Base Styles ========== */
@@ -55,6 +69,33 @@ body {
     height: 105%;
 }
 
+.dotted-bg {
+    background-image: radial-gradient(circle at center, #2b2b2b 2px, transparent 2px);
+    background-size: 40px 40px; /* Adjust spacing between dots */
+    background-color: #121212; /* Background color behind the dots */
+    background-attachment: fixed;
+    /* Removed animation since keyframes do not animate any property */
+}
+
+#sc-one>h2::after {
+    content: "";
+    width: 4px;
+    height: 30px;
+    transform: translate(5px, 5px);
+    background: white;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* ========== Typography ========== */
 h1,
 h2,
@@ -99,55 +140,51 @@ section.grid > h1 {
 section.grid.jc-sb {
     display: flex;
     flex-direction: column; /* stack heading and projects vertically */
-    justify-content: space-between !important;
-    align-items: center;    /* center content horizontally */
-    gap: 0px !important;              /* space between heading and projects */
+    justify-content: flex-start !important;
+    align-items: center;
+    gap: 5rem !important; /* space between heading and projects */
 }
 
 /* ========== Responsive ========== */
 @media (max-width: 640px) {
-    /* Mobile adjustments */
-    section {
-        height: 100vh;
-        justify-content: center !important;
+    /* Ensure section fits screen width naturally */
+    section.grid.jc-sb {
+        padding: 40px 20px;
+        gap: 30px !important; /* slightly smaller gap for mobile */
     }
     
-    h1,
-    h2 {
-        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+    /* Center the heading */
+    section.grid.jc-sb > h1 {
+        width: 90%;       /* match .projects width */
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
-    .grid {
-        gap: 0;
-        grid-auto-flow: row;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
+    /* Projects container responsive layout */
     .projects {
-        justify-content: space-between;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: 1fr; /* stack vertically */
+        width: 90%;                /* fit within mobile view */
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 20px;
+        box-sizing: border-box;
     }
     
+    /* Each project card */
     .project-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
         height: auto;
     }
     
-    section.grid > h1 {
-        display: flex;          /* make h1 a flex container */
-        align-items: center;    /* center content vertically */
-        justify-content: center;/* center content horizontally */
-        width: 90%;             /* match .projects width */
-        max-width: 900px;       /* match .projects max-width */
-        height: 100%;            /* height reference for vertical centering */
-        text-align: center;
-        margin: 0 auto;
-        box-sizing: border-box;
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
     }
-    /* section.grid.jc-sb {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between !important;
-    align-items: center;    
-    gap: 30px !important;             
-    } */
 }
