@@ -48,8 +48,13 @@ body {
 .jc-sb {
     justify-content: space-between !important;
 }
+
+.left-align {
+    text-align: left !important;
+}
+
 /* ========== Items ======== */
-.project-card {
+/* .project-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +69,35 @@ body {
 }
 
 .project-card:hover {
+    cursor: pointer;
+    border-style: solid;
+    height: 105%;
+} */
+ .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    max-width: 900px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Card Item */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed white;
+    border-radius: 8px; 
+    width: 100%;
+    height: 100%;
+    padding: 30px;    
+    animation: all 0.3 ease;
+}
+
+.card:hover {
     cursor: pointer;
     border-style: solid;
     height: 105%;
@@ -116,14 +150,8 @@ section {
     box-sizing: border-box;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    width: 90%;
-    max-width: 900px;
-    gap: 20px;
-    box-sizing: border-box;
-}
+
+
 
 section.grid > h1 {
     display: flex;          /* make h1 a flex container */
