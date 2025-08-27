@@ -248,7 +248,7 @@ section.grid.jc-sb {
      border-radius: 12px;
      padding: 20px;
      text-align: left;
-     transition: transform 0.3s ease, background 0.3s ease;
+     transition: transform 0.3s ease, background 0.3s ease, height 0.4s ease;
 }
 
 .card:hover {
@@ -281,8 +281,12 @@ section.grid.jc-sb {
      color: #fff;
 }
 
+.card-desc {
+    display: none;
+}
+
 /* =======================
-    11. Responsive Tweaks
+    Responsive Tweaks
     ======================= */
 @media (max-width: 640px) {
      .experience h1 {
