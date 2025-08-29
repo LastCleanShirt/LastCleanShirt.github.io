@@ -20,9 +20,11 @@ document.addEventListener("DOMContentLoaded", function(){
         card.addEventListener("click", function() {
             // Find the <p> inside this timeline-item
             const hiddenText = this.querySelector(".card-desc");
+            const arrowDown = this.querySelector(".arrow-down")
             if (hiddenText) {
                 // Toggle between display: none and block
                 hiddenText.style.display = hiddenText.style.display === "block" ? "none" : "block";
+                arrowDown.innerHTML = arrowDown.innerHTML === "v" ? "^" : "v";
             }
         });
     });
